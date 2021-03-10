@@ -1,7 +1,7 @@
-FROM alpine:3.13 AS builder
+FROM alpine:3.13.2 AS builder
 WORKDIR /workdir
 RUN apk update && apk add --no-cache \
-        git==2.30.1-r0 \
+        git==2.30.2-r0 \
         autoconf==2.69-r3 \
         automake==1.16.3-r0 \
         libtool==2.4.6-r7 \
