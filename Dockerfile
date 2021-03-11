@@ -26,7 +26,7 @@ RUN autoreconf -fi \
     && ./configure --disable-docs --disable-maintainer-mode --with-oniguruma >config.out 2>&1 \
     && make -j$(nproc) LDFLAGS=-all-static > make.out 2>&1 \
     && strip jq
-    
+
 FROM busybox:1.32.1
 COPY --from=builder /workdir/curl/src/curl /bin/
 RUN chmod 755 /bin/curl
